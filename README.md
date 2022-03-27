@@ -10,10 +10,8 @@ Using MongoDB, I plan to make a Pokemon database that will function as a Pokedex
 #### Front End
 With the help of React, Express and Node, I plan to display a home page where users can search a Pokemon by name. I also plan to have a page with all the Pokemon from the database. When clicked, the page will navigate to another page with the clicked Pokemon and some of it's attributes. There will also be a separate page where Pokemon can be displayed by type and showcase their weaknesses. 
 
-<center>
 <img src="https://i.imgur.com/hKSJm6f.png" height="300px" width ='350px' /> <img src="https://i.imgur.com/4bQSYzy.png" height="300px" width ='350px'/>
 <img src="https://i.imgur.com/a8p4tBv.png" height="300px" width ='350px'/> <img src="https://i.imgur.com/dX7Lual.png" height="300px" width ='350px'/>
-</center>
 
 
 ***
