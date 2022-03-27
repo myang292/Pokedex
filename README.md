@@ -10,8 +10,8 @@ Using MongoDB, I plan to make a Pokemon database that will function as a Pokedex
 #### Front End
 With the help of React, Express and Node, I plan to display a home page where users can search a Pokemon by name. I also plan to have a page with all the Pokemon from the database. When clicked, the page will navigate to another page with the clicked Pokemon and some of it's attributes. There will also be a separate page where Pokemon can be displayed by type and showcase their weaknesses. 
 
-<img src="https://imgur.com/hKSJm6f" height="300px" /> <img src="https://imgur.com/4bQSYzy" height="300px" />
-<img src="https://imgur.com/a8p4tBv" height="300px" /> <img src="https://imgur.com/dX7Lual" height="300px" />
+<img src="https://i.imgur.com/hKSJm6f.png" height="300px" /> <img src="https://i.imgur.com/4bQSYzy.png" height="300px" />
+<img src="https://i.imgur.com/a8p4tBv.png" height="300px" /> <img src="https://i.imgur.com/dX7Lual.png" height="300px" />
 
 
 ***
@@ -27,7 +27,9 @@ Node
 
 ### Planning
 [Figma Wireframe](https://www.figma.com/file/0E7gnOrPi1UQxSdm2l1RDl/Pokedex?node-id=12%3A21)
+</br>
 [Trello Board](https://trello.com/b/Q5zUhCb5/pokedex)
+</br>
 [ERD](https://app.diagrams.net/#G1brVXZc9oto1ca565Us54H1M49GHGcYQF)
 
 
@@ -35,7 +37,9 @@ Node
 
 ### Resources
 [Pokedex]()
+</br>
 [Pokemon Datebase](https://dummydata.netlify.app/pokedex.json)
+</br>
 [General Assembly Lessons](https://github.com/SEI-R-2-22/class_wiki)
 
  
