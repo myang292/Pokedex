@@ -1,5 +1,5 @@
 const { model } = require('mongoose')
-const PokemonSchema = requre('./pokemon')
+const PokemonSchema = require('./pokemon')
 const PoketypeSchema = require('./poketype')
 
 const Pokemon = model('pokemons', PokemonSchema)

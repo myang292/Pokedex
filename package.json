@@ -1,0 +1,25 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "### Description Users will be able to navigate through a set list of Pokemon. They will be able to search for a speicifc Pokemon by name or generate a random Pokemon. Users will also be able to navigate to a page that displays a full list of all Pokemone in the database. Once a Pokemon is searched or clicked on, users will be naviaged to a page displaying the Pokemon and attributes. Users will also have the option to sort the Pokemon by type via a dropdown bar and be shown the weaknesses of each.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backEnd/server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myang292/Pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myang292/Pokedex/issues"
+  },
+  "homepage": "https://github.com/myang292/Pokedex#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

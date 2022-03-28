@@ -30,7 +30,8 @@ app.get('/api/poketypes', async (req, res) => {
 
 app.get('/api/pokemons/:id', async (req, res) => {
     const { id } = req.params;
-
+    const onePokemon = await Pokemon.findById(id)
+    res.json(onePokemon)
 })
 
 app.listen(PORT, () => {
