@@ -1,11 +1,11 @@
 import './styles/App.css'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Pokemon from './pages/Pokemon'
+import AllPokemon from './pages/AllPokemon'
+import PokeType from './pages/PokeType'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Nav from './components/Nav'
-
 
 function App() {
   
@@ -22,16 +22,14 @@ function App() {
   },[])
 
 
-
-
   return (
     <div className="App">
       <Nav />
       <main>
         <Routes>
           <Route path='/' element={<Home pokemon={pokemon}/>} />
-          <Route path='pokemon' element={<Pokemon pokemoon={pokemon}/>} />
-          
+          <Route path='pokemon' element={<AllPokemon pokemoon={pokemon}/>} />
+          <Route path="/poketypes" element={<PokeType pokemon={pokemon}/>} />
         </Routes>
       </main>
     </div>

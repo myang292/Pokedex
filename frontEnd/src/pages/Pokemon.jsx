@@ -4,26 +4,27 @@ import { useParams } from 'react-router-dom'
 
 const Pokemon = (props) => {
 
-    let { id } = useParams()
+    // let { id } = useParams()
 
-    const [selectedPokemon, setPokemon] = useState('')
+    // const [Pokemon, setPokemon] = useState('')
 
-    useEffect(() => {
-        let selectedPokemon = props.Pokemon.find(
-            (pokemon) => pokemon._id === id
-        )
-        setPokemon(selectedPokemon)
-    }, [props.Pokemon, id])
+    // useEffect(() => {
+    //     let selectedPokemon = props.Pokemon.find(
+    //         (pokemon) => pokemon._id === (id)
+    //     )
+    //     setPokemon(selectedPokemon)
+    // }, [props.Pokemon, id])
 
     // console.log(selectedPokemon)
 
 
-    if (selectedPokemon) {
+    if (Pokemon) {
     return(
         <div>
-            <Pokemon />
-            <h4>{selectedPokemon.num}</h4>
-            <h3>{selectedPokemon.name}</h3>
+            Working
+            {/* <Pokemon /> */}
+            {/* <h4>{Pokemon.num}</h4>
+            <h3>{Pokemon.name}</h3> */}
         </div>
     )
     } else {
