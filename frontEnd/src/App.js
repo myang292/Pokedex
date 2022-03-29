@@ -11,17 +11,28 @@ import Pokemon from './pages/Pokemon'
 
 
 function App() {
+  const [pokemon, setPokemon] = useState([])
   
   const getPokemon = async() => {
     const pokemonList = await axios.get('http://localhost:3001/api/pokemons')
     setPokemon(pokemonList.data)
     // console.log(pokemonList.data)
   }
+
+
+  const [poketypes, setPoketypes] = useState([])
+
+  const getPoketypes = async() => {
+    const poketypes = await axios.get('http://localhost:3001/api/poketypes')
+    setPoketypes(poketypes.data)
+    // console.log(poketypes.data)
+  }
+
   
-  const [pokemon, setPokemon] = useState([])
 
   useEffect(() => {
     getPokemon()
+    getPoketypes()
   },[])
 
 

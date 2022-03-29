@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router'
 
 const Pokemon = (props) => {
     
+console.log(props)
+
     let {id} = useParams()
 
     const [selectPokemon, setPokemon] = useState('')
