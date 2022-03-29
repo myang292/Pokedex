@@ -2,8 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import Search from '../components/search'
+import Search from '../components/Search'
 import Pokemon from './Pokemon'
+import PokeCard from '../components/PokeCard'
 
 const Home = (props) => {
 
@@ -34,11 +35,12 @@ const Home = (props) => {
 
     return(
         <div>
+            {/* <pokeCard /> */}
             <h1>List of Pokemon</h1>
             <Search onSubmit={searchOnSubmit} onChange={searchOnChange} value={searchQuery}/>
             <h3>Showing Results for: {searchQuery}</h3>
             {searchResults.map((results) => {
-            return <Pokemon key={results._id} onClick={() => showPokemon(results)} image={results.img} name={results.name} />
+            return <PokeCard key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name} height={results.height}/>
     })}
         </div>
     )
