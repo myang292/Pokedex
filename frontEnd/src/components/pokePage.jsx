@@ -1,6 +1,6 @@
 import React from 'react'
 
-const onePokemon = (props) => {
+const pokePage = (props) => {
 
     return( 
         <div onClick={(props.onClick)}>
@@ -16,4 +16,4 @@ const onePokemon = (props) => {
     )
 }
 
-export default onePokemon
+export default pokePage
