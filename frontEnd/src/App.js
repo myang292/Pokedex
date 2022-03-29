@@ -6,6 +6,7 @@ import PokeType from './pages/PokeType'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Nav from './components/Nav'
+import Pokemon from './pages/Pokemon'
 
 
 
@@ -14,7 +15,7 @@ function App() {
   const getPokemon = async() => {
     const pokemonList = await axios.get('http://localhost:3001/api/pokemons')
     setPokemon(pokemonList.data)
-    console.log(pokemonList.data)
+    // console.log(pokemonList.data)
   }
   
   const [pokemon, setPokemon] = useState([])
@@ -30,8 +31,8 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home pokemon={pokemon}/>} />
-          <Route path='pokemon' element={<AllPokemon pokemoon={pokemon}/>} />
-          {/* <Route path='pokemon/:id' element={<Pokemon pokemon={pokemon}/>} /> */}
+          <Route path='pokemon' element={<AllPokemon pokemon={pokemon}/>} />
+          <Route path='pokemon/:id' element={<Pokemon pokemon={pokemon}/>} />
           <Route path="/poketypes" element={<PokeType pokemon={pokemon}/>} />
         </Routes>
       </main>

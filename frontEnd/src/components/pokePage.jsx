@@ -6,11 +6,10 @@ const PokePage = (props) => {
 
     let navigate = useNavigate()
   
-    const showPokemons = (pokemons) => {
-      navigate(`${pokemons._id}`)
-      console.log(props.pokemon)
+    const showPokemons = (pokemon) => {
+      navigate(`${pokemon._id}`)
     }
-
+    console.log(props.pokemon)
 
     return( 
         <div>

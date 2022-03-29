@@ -4,29 +4,32 @@ import { useNavigate } from 'react-router'
 import PokePage from '../components/PokePage'
 // import Pokemon from './components/Pokemon'
 
-// const [pokemons, setPokemons] = useState([])
 
 const AllPokemon = (props) => {
+    let navigate = useNavigate()
+           
+    const showPokemons = (pokemon) => {
+        navigate(`${pokemon._id}`)
+    }
+    console.log(props.pokemon)
 
-//     const getPokemon = async() => {
-//         const pokeList = await axios.get('http://localhost:3001/api/pokemons')
-//         setPokemons(pokeList.data)
-//     }
-//     // console.log(getPokemon)
-
-
-//     useEffect(() => {
-//         getPokemon()
-//     })
-
-    // console.log(getPokemon)
-
-    return(
-        <div>
-            heyyyyy
-            < PokePage />
+    return (
+        <div className="poke-grid">
+            Hello
+            {props.pokemon.map((pokemon) => {
+                return(
+                <div>
+                    <div className="poke-card" onClick={() => showPokemons(pokemon)} key={pokemon._id}>
+                        <img style={{ display: 'block' }} src={pokemon.img} alt={pokemon.name} />
+                        <h3>{pokemon.name}</h3>
+                    </div>
+              </div>
+                )
+            })} 
         </div>
+          
     )
 }
+
 
 export default AllPokemon

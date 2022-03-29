@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import PokePage from '../components/PokePage'
+import PokeCard from '../components/PokeCard'
 
 const Pokemon = (props) => {
-
-
 
     if (Pokemon) {
     return(
         <div>
             Working
-            <PokePage />
+            <PokeCard num={props.num} name={props.name}/>
         </div>
     )
     } else {

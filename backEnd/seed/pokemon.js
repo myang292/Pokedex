@@ -517,7 +517,7 @@ const main = async () => {
     const Jigglypuff = await new Pokemon({
         num: '039',
         name: 'Jigglypuff',
-        img: 'http://assets.stickpng.com/images/585961604f6ae202fedf285a.png',
+        img: 'https://i.pinimg.com/originals/30/ab/da/30abda8d8e85f015bd9c6c2db66a8c13.jpg',
         height: '0.51m',
         weight: '5.50kg',
         type: normal._id,
@@ -528,7 +528,7 @@ const main = async () => {
     const Wigglytuff = await new Pokemon({
         num: '040',
         name: 'Wigglytuff',
-        img: 'https://archives.bulbagarden.net/media/upload/thumb/9/92/040Wigglytuff.png/250px-040Wigglytuff.png',
+        img: 'https://e7.pngegg.com/pngimages/49/1006/png-clipart-pokemon-go-pokemon-x-and-y-wigglytuff-pokemon-mystery-dungeon-explorers-of-darkness-time-pokemon-irochi-mammal-vertebrate.png',
         height: '0.99m',
         weight: '12.00kg',
         type: normal._id,

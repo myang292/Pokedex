@@ -6,7 +6,7 @@ const Nav = () => {
             <nav>
                 <Link to='/'>Home</Link>
                 <Link to='pokemon'>Pokemon</Link>
-                <Link to='poketypes'>Types of Pokemon</Link>
+                <Link to='poketypes'>Types</Link>
             </nav>
         </header>
     )
