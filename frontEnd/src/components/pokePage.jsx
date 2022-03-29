@@ -1,32 +1,32 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 
 const PokePage = (props) => {
 
-    let navigate = useNavigate()
-  
-    const showPokemons = (pokemon) => {
-      navigate(`${pokemon._id}`)
-    }
-    console.log(props.pokemon)
 
-    return( 
+    let {id} = useParams()
+
+    const [selectedPokemon, setPokemon] = useState('')
+
+    useEffect(() => {
+        let selectedPokemon = props.pokemons.filter(
+            (pokemon) => pokemon._id === (id)
+        )
+        setPokemon(selectedPokemon)
+    }, [props.pokemons, id])
+
+    console.log(selectedPokemon)
+
+    return(
         <div>
-            {props.pokemons?.map((pokemon) => (
-                <div>
-                    <h4>{pokemon.num}</h4>
-                    {/* <h3>{pokemon.name}</h3>
-                    <img src = {pokemon.img} alt={pokemon.img}/>
-                    <p>
-                        {pokemon.height}
-                        {pokemon.weight}
-                        {pokemon.weakness}
-                    </p> */}
-                </div>
-            ))}
+            <h2>Workingggggg</h2>
+            {props.name}
+            <img src ={props.img} alt={props.img}/>
         </div>
     )
+
 }
 
 export default PokePage

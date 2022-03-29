@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import { useNavigate } from 'react-router'
-import PokePage from '../components/PokePage'
-// import Pokemon from './components/Pokemon'
+// import PokePage from '../components/PokePage'
 
 
 const AllPokemon = (props) => {
@@ -19,6 +17,7 @@ const AllPokemon = (props) => {
             {props.pokemon.map((pokemon) => {
                 return(
                 <div>
+                    {/* <PokePage /> */}
                     <div className="poke-card" onClick={() => showPokemons(pokemon)} key={pokemon._id}>
                         <img style={{ display: 'block' }} src={pokemon.img} alt={pokemon.name} />
                         <h3>{pokemon.name}</h3>

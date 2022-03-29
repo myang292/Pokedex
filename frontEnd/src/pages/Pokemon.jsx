@@ -1,23 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import PokeCard from '../components/PokeCard'
+import { useNavigate } from 'react-router'
+
 
 const Pokemon = (props) => {
+    
+    let {id} = useParams()
 
-    if (Pokemon) {
+    const [selectPokemon, setPokemon] = useState('')
+
+    useEffect(() => {
+        let selectPokemon = props.pokemon.find(
+            (pokemon) => pokemon._id === id
+            )
+            setPokemon(selectPokemon)
+            console.log(setPokemon)
+        }, [])
+        
+        
+    // if(selectPokemon) {
     return(
         <div>
-            Working
-            <PokeCard num={props.num} name={props.name}/>
+            {/* hello */}
+            {selectPokemon.num}
+            <br />
+            <img src = {selectPokemon.img} alt = {selectPokemon.img}/>
+            <br />
+            {selectPokemon.name}
+            <br />
+            {/* {selectPokemon.type} */}
+            <br />
+            {selectPokemon.height}
+            <br />
+            {selectPokemon.weight}
+            <br />
+            {/* {selectPokemon.weaknesses} */}
         </div>
     )
-    } else {
-        return(
-            <div>
-                <p>uhhhhh not working???</p>
-            </div>
-        )
-    }
+
+    // }
 }
 
 export default Pokemon
