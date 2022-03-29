@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-// import Pokemon from './components/Pokemon'
+import PokePage from '../components/PokePage'
 
 const Pokemon = (props) => {
 
@@ -10,6 +10,7 @@ const Pokemon = (props) => {
     return(
         <div>
             Working
+            <PokePage />
         </div>
     )
     } else {

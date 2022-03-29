@@ -35,12 +35,11 @@ const Home = (props) => {
 
     return(
         <div>
-            {/* <pokeCard /> */}
             <h1>List of Pokemon</h1>
             <Search onSubmit={searchOnSubmit} onChange={searchOnChange} value={searchQuery}/>
             <h3>Showing Results for: {searchQuery}</h3>
             {searchResults.map((results) => {
-            return <PokeCard key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name} height={results.height}/>
+            return <PokeCard key={results._id} onClick={() => showPokemon(results)} num={results.num} img={results.img} name={results.name} />
     })}
         </div>
     )

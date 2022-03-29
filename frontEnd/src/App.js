@@ -7,6 +7,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Nav from './components/Nav'
 
+
+
 function App() {
   
   const getPokemon = async() => {
@@ -29,6 +31,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home pokemon={pokemon}/>} />
           <Route path='pokemon' element={<AllPokemon pokemoon={pokemon}/>} />
+          {/* <Route path='pokemon/:id' element={<Pokemon pokemon={pokemon}/>} /> */}
           <Route path="/poketypes" element={<PokeType pokemon={pokemon}/>} />
         </Routes>
       </main>

@@ -12,23 +12,15 @@ const PokeCard = (props) => {
         setPokeCard(data.PokeCard)
     }
 
-
-    // useEffect(() => {
-    //     pokeCard = props.pokemons.map((pokemon) => {
-
-    //     }
-    // )})
-
     useEffect (() => {
         getPokeCard()
     }, [])
 
     return(
         <div>
-            {props.num}
-            {props.name}
-            {props.height}
-            {props.weight}
+            <h4>{props.num}</h4>
+            <img src = {props.img} alt = {props.img} onClick={props.onClick}/>
+            <h3>{props.name}</h3>
         </div>
     )
 }
