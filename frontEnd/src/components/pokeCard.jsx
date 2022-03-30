@@ -23,8 +23,10 @@ const PokeCard = (props) => {
         <div>
             <h2>Workingggggg</h2>
             {props.num}
+            <br />
             {props.name}
-            <img src ={props.img} alt={props.img} onClick={props.onClick}/>
+            <br />
+            <img src ={props.img} alt={props.img} onClick={props.onClick} style={{width:'300px'}}/>
 
         </div>
     )

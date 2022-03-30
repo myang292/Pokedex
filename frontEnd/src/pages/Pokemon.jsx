@@ -26,7 +26,7 @@ console.log(props)
             {/* hello */}
             {selectPokemon.num}
             <br />
-            <img src = {selectPokemon.img} alt = {selectPokemon.img}/>
+            <img src = {selectPokemon.img} alt = {selectPokemon.img} style={{width:'300px'}}/>
             <br />
             {selectPokemon.name}
             <br />

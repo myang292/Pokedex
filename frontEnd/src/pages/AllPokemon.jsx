@@ -19,7 +19,7 @@ const AllPokemon = (props) => {
                 <div>
                     {/* <PokePage /> */}
                     <div className="poke-card" onClick={() => showPokemons(pokemon)} key={pokemon._id}>
-                        <img style={{ display: 'block' }} src={pokemon.img} alt={pokemon.name} />
+                        <img style={{ display: 'block' }} src={pokemon.img} alt={pokemon.name} style={{width:'300px'}}/>
                         <h3>{pokemon.name}</h3>
                     </div>
               </div>

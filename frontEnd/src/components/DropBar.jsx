@@ -28,6 +28,8 @@ const DropBar = (props) => {
     //     display({pokemon.type})
     //     }
 
+
+    //.FILTER!!!!!!
     return(
         <div>
             <label>
