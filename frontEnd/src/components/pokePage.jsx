@@ -24,6 +24,7 @@ const PokePage = (props) => {
             <h2>Workingggggg</h2>
             {props.name}
             <img src ={props.img} alt={props.img}/>
+            {props.type}
         </div>
     )
 

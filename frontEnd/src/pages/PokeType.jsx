@@ -1,9 +1,16 @@
 import React from 'react'
+import DropBar from '../components/DropBar'
 
-const PokeType = () => {
+const PokeType = (props) => {
 
     
-    return('Hi')
+    return(
+        <div>
+            hiiiiii
+
+        <DropBar />
+        </div>
+    )
 }
 
 
