@@ -6,6 +6,15 @@ h1 {
   margin: 30px;
 }
 
+h2 {
+  margin-bottom:0px;
+}
+
+h3 {
+  margin-top:0px;
+  margin-bottom: 10px;
+}
+
 header {
   background-color: white;
 }
@@ -72,7 +81,7 @@ a:hover {
 }
 
 .poketypes {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .search-query {

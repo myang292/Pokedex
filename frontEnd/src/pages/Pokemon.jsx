@@ -24,19 +24,17 @@ const Pokemon = (props) => {
         return(
             <div className='poketypes'>
                 <br />
-                N° {selectPokemon.num}
-                <br />
+                <h2>N° {selectPokemon.num}</h2>
+                <h3>{selectPokemon.name}</h3>
                 <img src = {selectPokemon.img} alt = {selectPokemon.img} style={{width:'300px'}}/>
                 <br />
-                {selectPokemon.name}
+                Type: {selectPokemon.type}
                 <br />
-                {selectPokemon.type}
+                Height: {selectPokemon.height}
                 <br />
-                {selectPokemon.height}
+                Weight: {selectPokemon.weight}
                 <br />
-                {selectPokemon.weight}
-                <br />
-                {/* {selectPokemon.weaknesses} */}
+                Weakness: {selectPokemon.weaknesses}
             </div>
         )
 
