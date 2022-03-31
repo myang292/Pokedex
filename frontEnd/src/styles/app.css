@@ -10,6 +10,12 @@ header {
 
 }
 
+input {
+  height: 50px;
+  width: 300px;
+  font-size: 25px;
+}
+
 nav {
   font-size: 30px;
   float: left;
@@ -41,11 +47,24 @@ a:hover {
 
 }
 
-.home-search {
+.dropdown {
+  height: 40px;
+  width: 225px;
+  font-size: 25px;
+  font-family: 'Press Start 2P', monospace;
+
+}
+
+.home-search-button {
   font-family: 'Press Start 2P', monospace;
   font-size: 30px;
   opacity: 0.7;
   margin: 20px;
+  background-color: white;
+}
+
+.home-search-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .pokedex-img {
@@ -55,9 +74,25 @@ a:hover {
 .search-query {
   height: 40px;
   width: 500px;
+  font-size: 40px;
 }
+
+.types-search-button {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 30px;
+  opacity: 0.7;
+  margin: 20px;
+  background-color: white;
+  transition-duration: 0.4s;
+}
+
+.types-search-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
 
 ::placeholder {
   font-family: 'Press Start 2P', monospace;
-  font-size: 40px;
+  /* font-size: 40px; */
 }

@@ -39,7 +39,7 @@ const PokeType = (props) => {
             <br />
             <br />
             <br />
-            <DropBar 
+            <DropBar className='options'
                 options={[
                     {label:"Pokemon Type", value:''},
                     {label:"Bug", value:'6240d3c9120ccefe46bc7b7c'},

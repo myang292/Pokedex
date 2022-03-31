@@ -44,7 +44,7 @@ const CRUD = (props) => {
 
         <div>
             <form onSubmit = { submit }>
-                <input type='text' id={'num'} name={'num'} placeholder={'Pokemon Number (ex. 001)'} onChange = {(e) => onChange(e)} />
+                <input type='text' id={'num'} name={'num'} placeholder={'Pokemon Number'} onChange = {(e) => onChange(e)} />
                 <br />
                 <input type='text' id={'name'} name={'name'} placeholder={'Pokemon Name'} onChange = {(e) => onChange(e)} />
                 <br />
@@ -58,7 +58,7 @@ const CRUD = (props) => {
                 <br />
                 <input type='text' id={'weaknesses'} name={'weaknesses'} placeholder={'Pokemon Weaknesses'} onChange = {(e) => onChange(e)} />
                 <br />
-                <button>Submit</button>
+                <button className='types-search-button'>Submit</button>
             </form>
         </div>
 

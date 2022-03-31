@@ -7,7 +7,7 @@ const Search = (props) => {
         <input className='search-query' type='text' name='search' value={props.value} placeholder='Pokemon Name' onChange={props.onChange} style={{height:'50px'}}> 
         </input>
         <br />
-        <button className = 'home-search' onClick={props.onSubmit}>Search</button>
+        <button className = 'home-search-button' onClick={props.onSubmit}>Search</button>
      </div>
     )
 }
