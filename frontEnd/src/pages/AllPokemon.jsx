@@ -19,10 +19,11 @@ const AllPokemon = (props) => {
             {props.pokemon.map((pokemon) => {
                 return(
                 <div>
-                    <div className="poke-card" onClick={() => showPokemons(pokemon)} key={pokemon._id}>
-                        <img style={{ display: 'block' }} src={pokemon.img} alt={pokemon.name} style={{width:'300px'}}/>
+                    <div className="poke-card" key={pokemon._id}>
+                        <img onClick={() => showPokemons(pokemon)} style={{ display: 'block' }} src={pokemon.img} alt={pokemon.name} style={{width:'300px'}}/>
                         <h3>{pokemon.name}</h3>
                     </div>
+                    <br />
               </div>
                 )
             })} 

@@ -8,30 +8,6 @@ const PokeType = (props) => {
 
     const[type, setType] = useState([])
 
-    // const findType = async(e, poketypes) => {
-    //     if (e.target.value==='') {
-    //         return
-    //     } else {
-    //         const type = await axios.get(`localhost:3001/api/poketypes/${e.target.value}`)
-    //     }
-    //     setType(type.data._id) 
-    //     console.log(e.target.value)
-    // }
-
-    // const findType = (poketypes) => {
-    //     Navigate(`${poketypes._id}`)
-    // }
-    
-    // let { id } = useParams
-
-
-    // useEffect(() => {
-    //     let selectedType = props.pokemon.filter(
-    //     (pokemon) => pokemon.poketypes === (id)
-    //     )
-    //     setType(selectedType)
-    // }, [props.poketypes, id])
-
 
 
     return(

@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router'
 
 const Pokemon = (props) => {
     
-console.log(props)
-
     let {id} = useParams()
 
     const [selectPokemon, setPokemon] = useState('')
@@ -18,29 +16,33 @@ console.log(props)
             setPokemon(selectPokemon)
             console.log(setPokemon)
         }, [])
-        
-        
-    // if(selectPokemon) {
-    return(
-        <div className='poketypes'>
-            {/* hello */}
-            {selectPokemon.num}
-            <br />
-            <img src = {selectPokemon.img} alt = {selectPokemon.img} style={{width:'300px'}}/>
-            <br />
-            {selectPokemon.name}
-            <br />
-            {/* {selectPokemon.type} */}
-            <br />
-            {selectPokemon.height}
-            <br />
-            {selectPokemon.weight}
-            <br />
-            {/* {selectPokemon.weaknesses} */}
-        </div>
-    )
 
-    // }
+        console.log(selectPokemon)
+        console.log(selectPokemon.type)
+        
+    if (selectPokemon) {
+        return(
+            <div className='poketypes'>
+                <br />
+                N° {selectPokemon.num}
+                <br />
+                <img src = {selectPokemon.img} alt = {selectPokemon.img} style={{width:'300px'}}/>
+                <br />
+                {selectPokemon.name}
+                <br />
+                {selectPokemon.type}
+                <br />
+                {selectPokemon.height}
+                <br />
+                {selectPokemon.weight}
+                <br />
+                {/* {selectPokemon.weaknesses} */}
+            </div>
+        )
+
+    } else {
+        return ('Pokemon loading...')
+    }
 }
 
 export default Pokemon

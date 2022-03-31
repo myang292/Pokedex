@@ -3,11 +3,11 @@
 h1 {
   text-align: center;
   font-size: 100px;
-  ;
+  margin: 30px;
 }
 
 header {
-
+  background-color: white;
 }
 
 input {
@@ -71,6 +71,10 @@ a:hover {
   height: 300px;
 }
 
+.poketypes {
+  font-size: 40px;
+}
+
 .search-query {
   height: 40px;
   width: 500px;
@@ -83,7 +87,6 @@ a:hover {
   opacity: 0.7;
   margin: 20px;
   background-color: white;
-  transition-duration: 0.4s;
 }
 
 .types-search-button:hover {
