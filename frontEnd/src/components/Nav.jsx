@@ -5,7 +5,9 @@ const Nav = () => {
         <header>
             <nav>
                 <Link to='/'>Home</Link>
+                &nbsp;
                 <Link to='pokemon'>Pokemon</Link>
+                &nbsp;
                 <Link to='poketypes'>Types</Link>
             </nav>
         </header>

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Search from '../components/Search'
 import PokeCard from '../components/PokeCard'
+import Nav from '../components/Nav'
 
 const Home = (props) => {
 
@@ -33,7 +34,14 @@ const Home = (props) => {
 console.log(props.type)
     return(
         <div>
+            
+
+            <br />
+
             <h1>List of Pokemon</h1>
+
+            <br />
+
             <Search onSubmit={searchOnSubmit} onChange={searchOnChange} value={searchQuery}/>
             <h3>Showing Results for: {searchQuery}</h3>
             {searchResults.map((results) => {

@@ -1,38 +1,44 @@
-.App {
+
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  font-size: 50px;
+  float: left;
+  bottom: 0;
+  background-color: white;
+  color: black;
+  opacity: .8;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:visited {
+  text-decoration: none;
+  color:black
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  text-decoration: none;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+  background-image: linear-gradient(red, white);
+  background-size: cover;
+
+}
+
+.poke-grid {
+  
 }

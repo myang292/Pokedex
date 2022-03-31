@@ -22,7 +22,7 @@ console.log(props)
         
     // if(selectPokemon) {
     return(
-        <div>
+        <div className='poketypes'>
             {/* hello */}
             {selectPokemon.num}
             <br />

@@ -38,7 +38,13 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      <header>
+        <Nav />
+      </header>
+      <br />
+      <br />
+      <br />
+      <br />
       <main>
         <Routes>
           <Route path='/' element={<Home pokemon={pokemon}/>} />

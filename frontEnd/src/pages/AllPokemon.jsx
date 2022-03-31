@@ -13,6 +13,8 @@ const AllPokemon = (props) => {
 
     return (
         <div className="poke-grid">
+            <br />
+            <br />
             Hello
             {props.pokemon.map((pokemon) => {
                 return(
