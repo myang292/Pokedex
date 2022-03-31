@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Nav from './components/Nav'
 import Pokemon from './pages/Pokemon'
+import Footer from './components/Footer'
 
 
 
@@ -49,8 +50,11 @@ function App() {
           <Route path='pokemon' element={<AllPokemon pokemon={pokemon}/>} />
           <Route path='pokemon/:id' element={<Pokemon pokemon={pokemon}/>} />
           <Route path="/poketypes" element={<PokeType poketypes={poketypes}/>} />
+          <Route path='/add-new' />
+          <Route path='/battle' element={<Pokemon pokemon={pokemon}/>} />
         </Routes>
       </main>
+      
     </div>
   );
 }

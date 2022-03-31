@@ -31,14 +31,16 @@ app.get('/api/poketypes', async (req, res) => {
         res.send(allPokeTypes)
     })
 
-app.post('/api/poketypes', async (req, res) => {
-    try {
-        const addNewType = await new Poketype(req.body)
-            await addNewType.save()
-            return res.status(201).json({poketype})
-        } catch (error) {
-            return res.status(500).json({ error: error.message })
-        }
+app.post('/api/add-pokemon', async (req, res) => {
+    // try {
+        const addNewPokemon = await req.body
+            // await addNewType.save()
+            Pokemon.insertMany(addNewPokemon)
+            return res.status(201).json({Pokemon})
+    // } catch (error) {
+    //         return res.status(500).json({ error: error.message })
+    //     }
+    console.log('working')
     })
 
 app.get('/api/poketypes/:id', async (req, res) => {
@@ -46,6 +48,18 @@ app.get('/api/poketypes/:id', async (req, res) => {
     const onePoketype = await Poketype.findById(id)
     res.json(onePoketype)
 })
+
+app.put('api/poketypes/:id', async (req, res) => {
+
+})
+
+app.delete('api/pokemon/:id', async (req, res) => {
+    const { id } = req.params;
+    const deleteOnePokemon = await Pokemon.findById(id)
+    Pokemon.deleteOne(deleteOnePokemon)
+    console.log(id)
+})
+
 
 app.listen(PORT, () => {
     console.log(`Express server is listening on port ${PORT}`)

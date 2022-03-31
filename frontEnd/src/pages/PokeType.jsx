@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import DropBar from '../components/DropBar'
 import CRUD from '../components/CRUD'
+import Footer from '../components/Footer'
 
 const PokeType = (props) => {
 
@@ -37,6 +38,8 @@ const PokeType = (props) => {
                 // onChange={findType} 
             />
             <CRUD />
+            <br />
+            <Footer />
         </div>
     )
 }

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Search from '../components/Search'
 import PokeCard from '../components/PokeCard'
 import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 const Home = (props) => {
 
@@ -55,6 +56,7 @@ console.log(searchResults._id)
             return <PokeCard key={results._id} onClick={() => showPokemon(results)} num={results.num} img={results.img} name={results.name} type={results.type}
             />
     })}
+    <Footer />
         </div>
     )
 

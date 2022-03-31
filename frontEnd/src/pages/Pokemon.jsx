@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useNavigate } from 'react-router'
-
+import Footer from '../components/Footer'
+import axios from 'axios'
 
 const Pokemon = (props) => {
     
@@ -17,9 +17,13 @@ const Pokemon = (props) => {
             console.log(setPokemon)
         }, [])
 
-        console.log(selectPokemon)
-        console.log(selectPokemon.type)
-        
+
+    const deleteOne = async() => {
+        const pokemon = await axios.delete(`http://localhost:3001/api/pokemons/${id}`)
+        // console.log(pokemon)
+    }
+
+
     if (selectPokemon) {
         return(
             <div className='poketypes'>
@@ -35,6 +39,10 @@ const Pokemon = (props) => {
                 Weight: {selectPokemon.weight}
                 <br />
                 Weakness: {selectPokemon.weaknesses}
+                <br />
+                <button onClick={deleteOne}>Delete</button>
+                <br />
+                <Footer />
             </div>
         )
 

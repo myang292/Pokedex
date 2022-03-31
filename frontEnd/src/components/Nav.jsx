@@ -9,6 +9,10 @@ const Nav = () => {
                 <Link to='pokemon'>Pokemon</Link>
                 &nbsp;
                 <Link to='poketypes'>Types</Link>
+                &nbsp;
+                <Link to=''>Add Pokemon</Link>
+                &nbsp;
+                <Link to=''>Battle</Link>
             </nav>
         </header>
     )

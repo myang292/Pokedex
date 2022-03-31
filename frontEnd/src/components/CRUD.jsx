@@ -1,12 +1,11 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import Axios from 'axios'
 import axios from 'axios'
 
 const CRUD = (props) => {
 
-    const url = 'http://localhost:3001/api/poketypes'
+    const url = 'http://localhost:3001/api/add-pokemon'
     const [data, setData] = useState({
         num:'',
         name:'',
@@ -28,15 +27,16 @@ const CRUD = (props) => {
             weaknesses: data.weaknesses,
         })
         .then(res => {
+            console.log(res)
             Navigate('/pokemons')
-            console.log(res.data)
         })
+        console.log(data.name)
     }
     function onChange(e) {
         const newdata = { ...data }
         newdata[e.target.id] = e.target.value
         setData(newdata)
-        console.log(newdata)
+        // console.log(newdata)
     }
 
 
