@@ -43,8 +43,6 @@ function App() {
       </header>
       <br />
       <br />
-      <br />
-      <br />
       <main>
         <Routes>
           <Route path='/' element={<Home pokemon={pokemon}/>} />
