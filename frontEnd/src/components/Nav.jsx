@@ -8,11 +8,9 @@ const Nav = () => {
                 &nbsp;
                 <Link to='pokemon'>Pokemon</Link>
                 &nbsp;
-                <Link to='poketypes'>Types</Link>
+                <Link to='/poketypes'>Types</Link>
                 &nbsp;
-                <Link to=''>Add Pokemon</Link>
-                &nbsp;
-                <Link to=''>Battle</Link>
+                <Link to='/add-new'>Add Pokemon</Link>
             </nav>
         </header>
     )

@@ -53,10 +53,10 @@ app.put('api/poketypes/:id', async (req, res) => {
 
 })
 
-app.delete('api/pokemon/:id', async (req, res) => {
+app.delete('/api/pokemons/:id', async (req, res) => {
     const { id } = req.params;
     const deleteOnePokemon = await Pokemon.findById(id)
-    Pokemon.deleteOne(deleteOnePokemon)
+    Pokemon.deleteOne( {_id: '624616129cb0f07da3f77470' } )
     console.log(id)
 })
 

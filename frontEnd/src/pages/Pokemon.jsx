@@ -19,7 +19,8 @@ const Pokemon = (props) => {
 
 
     const deleteOne = async() => {
-        const pokemon = await axios.delete(`http://localhost:3001/api/pokemons/${id}`)
+        const pokemon = await axios.delete(`http://localhost:3001/api/pokemons/624616129cb0f07da3f77470`)
+        console.log('delete button works')
         // console.log(pokemon)
     }
 

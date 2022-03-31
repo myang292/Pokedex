@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Nav from './components/Nav'
 import Pokemon from './pages/Pokemon'
 import Footer from './components/Footer'
+import Types from './pages/Types'
 
 
 
@@ -49,9 +50,8 @@ function App() {
           <Route path='/' element={<Home pokemon={pokemon}/>} />
           <Route path='pokemon' element={<AllPokemon pokemon={pokemon}/>} />
           <Route path='pokemon/:id' element={<Pokemon pokemon={pokemon}/>} />
-          <Route path="/poketypes" element={<PokeType poketypes={poketypes}/>} />
-          <Route path='/add-new' />
-          <Route path='/battle' element={<Pokemon pokemon={pokemon}/>} />
+          <Route path='/add-new' element={<PokeType poketypes={poketypes}/>}/>
+          <Route path="/poketypes" element={<Types poketypes={poketypes}/>}/>
         </Routes>
       </main>
       
