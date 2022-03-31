@@ -25,7 +25,7 @@ function App() {
   const getPoketypes = async() => {
     const poketypes = await axios.get('http://localhost:3001/api/poketypes')
     setPoketypes(poketypes.data)
-    // console.log(poketypes.data)
+    console.log(poketypes.data)
   }
 
   
@@ -44,7 +44,7 @@ function App() {
           <Route path='/' element={<Home pokemon={pokemon}/>} />
           <Route path='pokemon' element={<AllPokemon pokemon={pokemon}/>} />
           <Route path='pokemon/:id' element={<Pokemon pokemon={pokemon}/>} />
-          <Route path="/poketypes" element={<PokeType pokemon={pokemon}/>} />
+          <Route path="/poketypes" element={<PokeType poketypes={poketypes}/>} />
         </Routes>
       </main>
     </div>

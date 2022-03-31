@@ -3,8 +3,8 @@ const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const { Pokemon, Poketype } = require('./models')
-
 const app = express()
+const db = require('./db')
 
 app.use(cors())
 app.use(express.json())
@@ -13,30 +13,27 @@ app.use(logger('dev'))
 app.get('/', (req, res) => {
     res.send('Okayyyyy')
 })
-
 app.get('/api/pokemons', async (req, res) => {
-    const allpokemons = await Pokemon.find()
-    console.log('All Pokemon are here!')
-    res.json(allpokemons)
-})
+    const allPokemons = await Pokemon.find({});
 
+    res.send(allPokemons);
+    // res.json(allpokemons)
+})
 app.get('/api/pokemons/:id', async (req, res) => {
     const { id } = req.params;
     const onePokemon = await Pokemon.findById(id)
     res.json(onePokemon)
 })
-
 app.get('/api/poketypes', async (req, res) => {
-    const allpoketypes = await Poketype.find()
-    res.json(allpoketypes)
-})
+    const allPokeTypes = await Poketype.find({})
 
+    res.send(allPokeTypes)
+})
 app.get('/api/poketypes/:id', async (req, res) => {
     const { id } = req.params;
-    const onePoketype = await Poketype.findById()
+    const onePoketype = await Poketype.findById(id)
     res.json(onePoketype)
 })
-
 
 app.listen(PORT, () => {
     console.log(`Express server is listening on port ${PORT}`)
