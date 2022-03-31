@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 const DropBar = ({ label, value, options, onChange }) => {
 
 
+    
     //.FILTER!!!!!!
     return(
         <div>

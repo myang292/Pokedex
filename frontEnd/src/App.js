@@ -25,7 +25,7 @@ function App() {
   const getPoketypes = async() => {
     const poketypes = await axios.get('http://localhost:3001/api/poketypes')
     setPoketypes(poketypes.data)
-    console.log(poketypes.data)
+    // console.log(poketypes.data)
   }
 
   

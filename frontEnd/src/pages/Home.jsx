@@ -17,7 +17,7 @@ const Home = (props) => {
 
     const searchOnSubmit = function (e) {
         const pokemon = props.pokemon
-        let results = pokemon.filter((pokemon) => {
+        let results = pokemon.find((pokemon) => {
         return pokemon.name.toLowerCase().includes(searchQuery.toLowerCase())
         })
         console.log(results)
