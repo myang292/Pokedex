@@ -9,7 +9,7 @@ const DropBar = ({ label, value, options, onChange }) => {
             <label>
                 <select className='dropdown' value = {value} onChange={onChange}>
                     {options.map((options) => (
-                        <option key={options._id} value={options._id}>{options.label}</option>
+                        <option key={options._id} value={options._id} onChange={onChange}>{options.label}</option>
                     ))}
                 </select>
             </label>

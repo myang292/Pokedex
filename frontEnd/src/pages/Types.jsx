@@ -6,47 +6,28 @@ import Footer from '../components/Footer'
 
 const Types = (props) => {
 
-    // const [poketypes, setPoketypes] = useState([])
-    // const getPoketypes = async() => {
-    //     const poketypes = await axios.get('http://localhost:3001/api/poketypes')
-    //     setPoketypes(poketypes.data)
-    //   }
+    const [poketypes, setPoketypes] = useState([])
+    const getPoketypes = async() => {
+        const poketypes = await axios.get('http://localhost:3001/api/poketypes')
+        setPoketypes(poketypes.data)
+    }
 
-    // const findByType = (props) => 
-    //     {props.poketypes.map((poketype) =>
-    //             <div>
-    //                 {poketype.name}
-    //                 <br />
-    //                 {poketype.weaknesses}
-    //             </div>
-    //         )
-    //     }
-    // console.log(props.poketypes)
-
-    // useEffect(() => {
-    //     getPoketypes()
-    // },[])
-
-//API CALL!!!!!!!!
-//NAVIGATE
-
-
-// let [selectedType, setSelectedType] = useState([])
-
-// const findByType = async (e) => {
-//     if (e.target.value === '') {
-//         return
-//     } else {
-//         const pokemonTypes = await axios.get(`http://localhost:3001/api/${e.target.value}`)
-//         setSelectedType(pokemonTypes.data.name)
-//     }
-// }
-// console.log(setSelectedType)
-
+    const findByType = (props) => 
+        {props.poketypes.filter((Poketypes) => {
+            return (
+                <div>
+                    {Poketypes.name}
+                    <br />
+                    {Poketypes.weaknesses}
+                </div>
+            )
+            })
+        }
+        
     return(
         <div>
-            {/* <br />
             <br />
+            <h2>Choose a type!</h2>
             <br />
             <DropBar className='options'
                 options={[
@@ -68,9 +49,8 @@ const Types = (props) => {
                     {label:"Water", value:'6245cca1f796cc593f684f14'}
                 ]}
                 onChange={findByType}
-            /> */}
+            />
             <br />
-            <h2>Pokemon Types</h2>
             {props.poketypes.map((poketype) =>
                 <div>
                     {poketype.name}
@@ -83,6 +63,5 @@ const Types = (props) => {
         </div>
     )
 }
-
 
 export default Types

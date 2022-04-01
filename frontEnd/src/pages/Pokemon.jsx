@@ -18,10 +18,15 @@ const Pokemon = (props) => {
         }, [])
 
 
-    const deleteOne = async() => {
-        console.log('delete button works')
-        const pokemon = await axios.delete(`api/pokemons/624616129cb0f07da3f77470`)
-        // console.log(pokemon)
+    // const deleteOne = async() => {
+    //     console.log('delete button works')
+    //     const pokemon = await axios.delete(`api/pokemons/624616129cb0f07da3f77470`)
+    //     console.log(pokemon)
+    // }
+
+
+    const deleteOne = (id) => {
+        setPokemon(props.filter((pokemon) => props._id !== id))
     }
 
 
@@ -42,7 +47,9 @@ const Pokemon = (props) => {
                 Weakness: {selectPokemon.weaknesses}
                 <br />
                 {/* <button onClick={deleteOne}>Delete</button> */}
-                <button onClick={() => deleteOne}>Deleteeee</button>
+                <button variant="primary" onClick={() => props.push(`/api/pokemons/${id}`)}>Edit</button>{' '}
+                {/* <button onClick={() => deleteOne}>Deleteeee</button> */}
+                <button onClick={() => props.deleteOne(props._id)}>Deleteeeeyyyy</button>
                 <br />
             </div>
         )
