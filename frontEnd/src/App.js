@@ -54,7 +54,7 @@ function App() {
           <Route path="/poketypes" element={<Types poketypes={poketypes}/>}/>
         </Routes>
       </main>
-      
+      <Footer />
     </div>
   );
 }

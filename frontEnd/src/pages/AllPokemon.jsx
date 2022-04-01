@@ -28,8 +28,6 @@ const AllPokemon = (props) => {
                     </div>
                 )
             })} 
-
-            <Footer />
         </div>
           
     )

@@ -32,15 +32,9 @@ app.get('/api/poketypes', async (req, res) => {
     })
 
 app.post('/api/add-pokemon', async (req, res) => {
-    // try {
         const addNewPokemon = await req.body
-            // await addNewType.save()
             Pokemon.insertMany(addNewPokemon)
             return res.status(201).json({Pokemon})
-    // } catch (error) {
-    //         return res.status(500).json({ error: error.message })
-    //     }
-    console.log('working')
     })
 
 app.get('/api/poketypes/:id', async (req, res) => {

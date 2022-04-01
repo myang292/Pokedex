@@ -19,7 +19,6 @@ const PokeType = (props) => {
             <br />
             <CRUD />
             <br />
-            <Footer />
         </div>
     )
 }

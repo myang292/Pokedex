@@ -55,7 +55,6 @@ console.log(searchResults._id)
             {searchResults.map((results) => {
             return <PokeCard key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name} type={results.type} />
     })}
-    <Footer />
         </div>
     )
 

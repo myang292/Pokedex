@@ -44,7 +44,6 @@ const Pokemon = (props) => {
                 {/* <button onClick={deleteOne}>Delete</button> */}
                 <button onClick={() => deleteOne}>Deleteeee</button>
                 <br />
-                <Footer />
             </div>
         )
 
