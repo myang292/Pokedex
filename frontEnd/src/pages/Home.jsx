@@ -14,7 +14,6 @@ const Home = (props) => {
 
     const searchOnChange = (e) => {
         const value = e.target.value
-        console.log(value)
         setSearchQuery(value)
     }
 
@@ -24,20 +23,14 @@ const Home = (props) => {
         return pokemon.name.toLowerCase().includes(searchQuery.toLowerCase())
         })
 
-        console.log(results)
-
         setSearchResults(results)
     }
 
     let navigate = useNavigate()
-
-    const showPokemon = (pokemon) => {
-    navigate(`pokemon/${pokemon._id}`)
+           
+    const showPokemons = (pokemon) => {
+        navigate(`${pokemon._id}`)
     }
-
-
-console.log(searchResults._id)
-
 
 
     return(
@@ -46,7 +39,6 @@ console.log(searchResults._id)
             <br />
             <h1>Pokedex</h1>
             <img className = 'pokedex-img' src = 'https://i.etsystatic.com/11279093/r/il/d6ac58/1799315681/il_570xN.1799315681_ii1x.jpg' alt ='https://i.etsystatic.com/11279093/r/il/d6ac58/1799315681/il_570xN.1799315681_ii1x.jpg'/>
-
             <br />
             <br />
 
@@ -55,7 +47,7 @@ console.log(searchResults._id)
                 {searchResults.map((results) => {
                 return (
                     <div className='search-wrapper'>
-                        <PokeCard className='search-results' key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name}/>
+                        <PokeCard className='search-results' key={results._id} onClick={() => showPokemons(results)} img={results.img} name={results.name}/>
                     </div>
                 )
                 })}

@@ -5,9 +5,11 @@ import { useParams } from 'react-router-dom'
 
 const PokeCard = (props) => {
 
+console.log(props)
+
     return(
         <div className='pokecard'>
-            <img className = 'search-poke-img' src ={props.img} />
+            <img className = 'search-pokecard' src ={props.img} />
             {props.name}
         </div>
     )

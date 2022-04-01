@@ -20,7 +20,7 @@ With the help of React I plan to display a home page where users can search a Po
 MongoDB
 Express
 React
-Node
+NodeJS
 
 
 ***

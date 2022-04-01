@@ -13,14 +13,21 @@ const Types = (props) => {
     }
 
     const findByType = (props) => 
-        {props.poketypes.filter((Poketypes) => {
-            return (
-                <div>
-                    {Poketypes.name}
-                    <br />
-                    {Poketypes.weaknesses.join(',')}
-                </div>
-            )
+        {
+            // props.poketypes.filter((Poketypes) => {
+            // return (
+            //     <div>
+            //         {Poketypes.name}
+            //         <br />
+            //         {Poketypes.weaknesses.join(',')}
+            //     </div>
+            // )
+            // })
+
+            poketypes.filter((poketype) => {
+                return (
+                    poketype._id
+                )
             })
         }
         
@@ -32,7 +39,7 @@ const Types = (props) => {
             <br />
             <DropBar className='options'
                 options={[
-                    {label:"Pokemon Type", value:''},
+                    {label:"Type", value:''},
                     {label:"Bug", value:'6240d3c9120ccefe46bc7b7c'},
                     {label:"Dragon", value:'6245cca1f796cc593f684f07'},
                     {label:"Electric", value:'6245cca1f796cc593f684f08'},
