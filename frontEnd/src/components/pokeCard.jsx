@@ -5,15 +5,12 @@ import { useParams } from 'react-router-dom'
 
 const PokeCard = (props) => {
 
+console.log(props)
 
     return(
-        <div>
-            {props.num}
-            <br />
+        <div className='pokecard'>
+            <img src ={props.img} />
             {props.name}
-            <br />
-            <img src ={props.img} alt={props.img} onClick={props.onClick}/>
-
         </div>
     )
 }

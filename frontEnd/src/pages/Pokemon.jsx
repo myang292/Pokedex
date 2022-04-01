@@ -30,6 +30,10 @@ const Pokemon = (props) => {
     }
 
 
+    
+
+
+
     if (selectPokemon) {
         return(
             <div className='poketypes'>
@@ -38,13 +42,13 @@ const Pokemon = (props) => {
                 <h3>{selectPokemon.name}</h3>
                 <img src = {selectPokemon.img} alt = {selectPokemon.img} style={{width:'300px'}}/>
                 <br />
-                Type: {selectPokemon.type}
+                Type: {selectPokemon.type.join(',')}
                 <br />
                 Height: {selectPokemon.height}
                 <br />
                 Weight: {selectPokemon.weight}
                 <br />
-                Weakness: {selectPokemon.weaknesses}
+                Weakness: {selectPokemon.weaknesses.join(',')}
                 <br />
                 {/* <button onClick={deleteOne}>Delete</button> */}
                 <button variant="primary" onClick={() => props.push(`/api/pokemons/${id}`)}>Edit</button>{' '}

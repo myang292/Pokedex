@@ -51,9 +51,13 @@ console.log(searchResults._id)
             <br />
 
             <Search onSubmit={searchOnSubmit} onChange={searchOnChange} value={searchQuery}/>
-            {/* <h3>Showing Results for: {searchQuery}</h3> */}
+            
             {searchResults.map((results) => {
-            return <PokeCard key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name} type={results.type} />
+            return (
+                <div className='search-wrapper'>
+                    <PokeCard className='search-results' key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name}/>
+                </div>
+            )
     })}
         </div>
     )
