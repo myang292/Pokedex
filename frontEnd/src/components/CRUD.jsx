@@ -26,11 +26,10 @@ const CRUD = (props) => {
             type: data.type,
             weaknesses: data.weaknesses,
         })
-        .then(res => {
-            Navigate('localhost:3000/pokemons')
-        })
+        navigate('/pokemon')
+        window.location.reload(true)
+        }
         
-    }
     function onChange(e) {
         const newdata = { ...data }
         newdata[e.target.id] = e.target.value
@@ -44,7 +43,7 @@ const CRUD = (props) => {
     return(
 
         <div>
-            <form onSubmit = { submit }>
+            <form onSubmit = { submit } >
                 <input type='text' id={'num'} name={'num'} placeholder={'Pokemon Number'} onChange = {(e) => onChange(e)} />
                 <br />
                 <input type='text' id={'name'} name={'name'} placeholder={'Pokemon Name'} onChange = {(e) => onChange(e)} />

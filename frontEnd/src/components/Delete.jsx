@@ -3,7 +3,7 @@ import React from 'react'
 
 const Delete = (props) => {
     return(
-        <button onClick={props.deleteOne}>Deleteeeeyyyy</button>
+        <button onClick={props.deleteOne}>Delete</button>
     )
 }
 
