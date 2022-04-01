@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import axios from 'axios'
+import Delete from '../components/Delete'
+
 
 const Pokemon = (props) => {
     
@@ -24,13 +26,15 @@ const Pokemon = (props) => {
     //     console.log(pokemon)
     // }
 
+    let Navigate = useNavigate()
 
-    const deleteOne = (id) => {
-        setPokemon(props.filter((pokemon) => props._id !== id))
+    const deleteOne = async (id) => {
+        await axios.delete(`http://localhost:3001/api/pokemons/${selectPokemon._id}`)
+        Navigate('/pokemon')
+        window.location.reload(true)
     }
 
 
-    
 
 
 
@@ -50,10 +54,11 @@ const Pokemon = (props) => {
                 <br />
                 Weakness: {selectPokemon.weaknesses.join(',')}
                 <br />
-                {/* <button onClick={deleteOne}>Delete</button> */}
+
                 <button variant="primary" onClick={() => props.push(`/api/pokemons/${id}`)}>Edit</button>{' '}
-                {/* <button onClick={() => deleteOne}>Deleteeee</button> */}
-                <button onClick={() => props.deleteOne(props._id)}>Deleteeeeyyyy</button>
+
+                <Delete deleteOne={() => deleteOne(selectPokemon._id)} />
+                {/* )} */}
                 <br />
             </div>
         )

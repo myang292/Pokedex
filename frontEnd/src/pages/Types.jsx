@@ -18,7 +18,7 @@ const Types = (props) => {
                 <div>
                     {Poketypes.name}
                     <br />
-                    {Poketypes.weaknesses}
+                    {Poketypes.weaknesses.join(',')}
                 </div>
             )
             })
@@ -55,7 +55,7 @@ const Types = (props) => {
                 <div>
                     {poketype.name}
                     <br />
-                    {poketype.weaknesses}
+                    {poketype.weaknesses.join(',')}
                 </div>
             )
         }

@@ -27,10 +27,9 @@ const CRUD = (props) => {
             weaknesses: data.weaknesses,
         })
         .then(res => {
-            console.log(res)
-            Navigate('/pokemons')
+            Navigate('localhost:3000/pokemons')
         })
-        console.log(data.name)
+        
     }
     function onChange(e) {
         const newdata = { ...data }
@@ -39,6 +38,7 @@ const CRUD = (props) => {
         // console.log(newdata)
     }
 
+    let navigate = useNavigate()
     
 
     return(
