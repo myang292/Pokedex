@@ -19,13 +19,6 @@ const Pokemon = (props) => {
             console.log(setPokemon)
         }, [])
 
-
-    // const deleteOne = async() => {
-    //     console.log('delete button works')
-    //     const pokemon = await axios.delete(`api/pokemons/624616129cb0f07da3f77470`)
-    //     console.log(pokemon)
-    // }
-
     let Navigate = useNavigate()
 
     const deleteOne = async (id) => {

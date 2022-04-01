@@ -14,7 +14,6 @@ const PokeType = (props) => {
         <div>
             <br />
             <br />
-            <br />
             <h2>Add a new Pokemon!</h2>
             <br />
             <CRUD />

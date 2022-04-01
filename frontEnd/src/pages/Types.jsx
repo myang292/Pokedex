@@ -27,6 +27,7 @@ const Types = (props) => {
     return(
         <div>
         <br />
+        <br />
             <h2>Choose a type!</h2>
             <br />
             <DropBar className='options'

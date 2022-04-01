@@ -42,7 +42,7 @@ console.log(searchResults._id)
 
     return(
         <div>
-            
+            <br />
             <br />
             <h1>Pokedex</h1>
             <img className = 'pokedex-img' src = 'https://i.etsystatic.com/11279093/r/il/d6ac58/1799315681/il_570xN.1799315681_ii1x.jpg' alt ='https://i.etsystatic.com/11279093/r/il/d6ac58/1799315681/il_570xN.1799315681_ii1x.jpg'/>
@@ -51,14 +51,15 @@ console.log(searchResults._id)
             <br />
 
             <Search onSubmit={searchOnSubmit} onChange={searchOnChange} value={searchQuery}/>
-            
-            {searchResults.map((results) => {
-            return (
-                <div className='search-wrapper'>
-                    <PokeCard className='search-results' key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name}/>
-                </div>
-            )
-    })}
+            <div className='pokecard-wrapper'>
+                {searchResults.map((results) => {
+                return (
+                    <div className='search-wrapper'>
+                        <PokeCard className='search-results' key={results._id} onClick={() => showPokemon(results)} img={results.img} name={results.name}/>
+                    </div>
+                )
+                })}
+            </div>
         </div>
     )
 
