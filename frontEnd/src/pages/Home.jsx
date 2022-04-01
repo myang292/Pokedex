@@ -43,7 +43,7 @@ console.log(searchResults._id)
     return(
         <div>
             
-
+            <br />
             <h1>Pokedex</h1>
             <img className = 'pokedex-img' src = 'https://i.etsystatic.com/11279093/r/il/d6ac58/1799315681/il_570xN.1799315681_ii1x.jpg' alt ='https://i.etsystatic.com/11279093/r/il/d6ac58/1799315681/il_570xN.1799315681_ii1x.jpg'/>
 

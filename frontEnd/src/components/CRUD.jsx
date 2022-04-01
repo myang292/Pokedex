@@ -42,7 +42,7 @@ const CRUD = (props) => {
 
     return(
 
-        <div>
+        <div className='add-options'>
             <form onSubmit = { submit } >
                 <input type='text' id={'num'} name={'num'} placeholder={'Pokemon Number'} onChange = {(e) => onChange(e)} />
                 <br />

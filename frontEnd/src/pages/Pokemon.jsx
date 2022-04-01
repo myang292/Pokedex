@@ -44,7 +44,7 @@ const Pokemon = (props) => {
                 <br />
                 <h2>N° {selectPokemon.num}</h2>
                 <h3>{selectPokemon.name}</h3>
-                <img src = {selectPokemon.img} alt = {selectPokemon.img} style={{width:'300px'}}/>
+                <img src = {selectPokemon.img} alt = {selectPokemon.img} className='single-pokemon'/>
                 <br />
                 Type: {selectPokemon.type.join(',')}
                 <br />

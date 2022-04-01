@@ -13,23 +13,26 @@ const AllPokemon = (props) => {
     console.log(props.pokemon)
 
     return (
-        <div id='wrapper'>
+        <div>
+            <br />
+            <br />
+            <h2>Pokemon</h2>
+            <div id='wrapper'>
+                {props.pokemon.map((pokemon) => {
+                    return(
+                        <div id="poke-card" key={pokemon._id} onClick={() => showPokemons(pokemon)}>
+                            <div id='pokemon-image'> 
+                                <img id='poke-image' src={pokemon.img} alt={pokemon.name}/>
+                            </div>
+                            <div id='pokemon-name'>
+                                <h4>{pokemon.name}</h4>
+                            </div>
 
-            {props.pokemon.map((pokemon) => {
-                return(
-                    <div id="poke-card" key={pokemon._id}>
-                        <div id='pokemon-image'> 
-                            <img id='poke-image' onClick={() => showPokemons(pokemon)} src={pokemon.img} alt={pokemon.name}/>
                         </div>
-                        <div id='pokemon-name'>
-                            <h4>{pokemon.name}</h4>
-                        </div>
-
-                    </div>
-                )
-            })} 
+                    )
+                })} 
+            </div>
         </div>
-          
     )
 }
 

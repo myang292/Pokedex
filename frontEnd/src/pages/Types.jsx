@@ -26,7 +26,7 @@ const Types = (props) => {
         
     return(
         <div>
-            <br />
+        <br />
             <h2>Choose a type!</h2>
             <br />
             <DropBar className='options'
@@ -51,16 +51,24 @@ const Types = (props) => {
                 onChange={findByType}
             />
             <br />
-            {props.poketypes.map((poketype) =>
-                <div>
-                    {poketype.name}
-                    <br />
-                    {poketype.weaknesses.join(',')}
-                </div>
-            )
-        }
-
-        </div>
+            <div className = 'type-div-wrapper'>
+                {props.poketypes.map((poketype) =>
+                    <div className='poketype-wrapper'>
+                        <div>
+                            <img className = 'poketype-image' src={poketype.img} />
+                        </div>
+                            <br />
+                        <div>
+                            {poketype.name}
+                        </div>
+                            <br />
+                        <div className = 'weaknesses'>
+                            {poketype.weaknesses.join(',')}
+                        </div>
+                    </div>
+                )}
+            </div>
+    </div>
     )
 }
 

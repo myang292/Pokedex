@@ -4,7 +4,7 @@ const Search = (props) => {
 
     return(
     <div className='search-bar'>
-        <input className='search-query' type='text' name='search' value={props.value} placeholder='Pokemon Name' onChange={props.onChange} style={{height:'50px'}}> 
+        <input className='search-query' type='text' name='search' value={props.value} placeholder='Pokemon Name' onChange={props.onChange} > 
         </input>
         <br />
         <button className = 'home-search-button' onClick={props.onSubmit}>Search</button>

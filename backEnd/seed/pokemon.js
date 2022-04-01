@@ -6,91 +6,106 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
     const bug = await new Poketype({
         name: 'bug',
-        weaknesses: ['fire', 'flying', 'rock']
+        weaknesses: ['fire', 'flying', 'rock'],
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pok%C3%A9mon_Bug_Type_Icon.svg/2048px-Pok%C3%A9mon_Bug_Type_Icon.svg.png'
     })
     bug.save();
     
     const dragon = await new Poketype({
         name: 'dragon',
-        weaknesses: ['ice', 'dragon']
+        weaknesses: ['ice', 'dragon'],
+        img: 'https://www.pokebeach.com/news/1211/pokemon-tcg-dragon-type-symbol.png'
     })
     dragon.save();
     
     const electric = await new Poketype({
         name: 'electric',
-        weaknesses: ['ground']
+        weaknesses: ['ground'],
+        img: 'https://bracketfights.com/images/hero/2019/favorite-electric-type-pokmon-all-gens-and-forms-18888/1620851024.jpg'
     })
     electric.save();
     
     const fighting = await new Poketype({
         name: 'fighting',
-        weaknesses: ['flying', 'psychic']
+        weaknesses: ['flying', 'psychic'],
+        img: 'https://bracketfights.com/images/hero/2019/favorite-fighting-type-pokmon-all-gens-and-forms--18888/1620849824.jpg'
     })
     fighting.save();
     
     const fire = await new Poketype({
         name: 'fire',
-        weaknesses: ['water', 'ground', 'rock']
+        weaknesses: ['water', 'ground', 'rock'],
+        img: 'https://www.giantbomb.com/a/uploads/scale_medium/16/164924/3083931-8746743194-flat%2C.jpg'
     })
     fire.save();
 
     const flying = await new Poketype({
         name: 'flying',
-        weaknesses: ['electric', 'ice', 'rock']
+        weaknesses: ['electric', 'ice', 'rock'],
+        img: 'https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_463/MTc0NDU3ODYxNzg1OTg2NDA4/best-attacks-in-pokemon-go.webp'
     })
     flying.save();
 
     const ghost = await new Poketype({
         name: 'ghost',
-        weaknesses: ['ghost']
+        weaknesses: ['ghost'],
+        img: 'https://i.imgur.com/VDdOOlL.png'
     })
     ghost.save();
 
     const grass = await new Poketype({
         name: 'grass',
-        weaknesses: ['fire', 'ice', 'poison', 'flying', 'bug']
+        weaknesses: ['fire', 'ice', 'poison', 'flying', 'bug'],
+        img: 'https://static.wikia.nocookie.net/pokemonenglish/images/c/cf/Grass-type-symbol-Pokemon-tcg.png'
     })
     grass.save();
 
     const ground = await new Poketype({
         name: 'ground',
-        weaknesses: ['water', 'grass', 'ice']
+        weaknesses: ['water', 'grass', 'ice'],
+        img: 'https://i.imgur.com/C54QSxy.png'
     })
     ground.save();
 
     const ice = await new Poketype({
         name: 'ice',
-        weaknesses: ['fire', 'fighting', 'rock']
+        weaknesses: ['fire', 'fighting', 'rock'],
+        img: 'http://pm1.narvii.com/6261/2630f0b2ceee049e78542d0eba9eeccb40271ceb_00.jpg'
     })
     ice.save();
 
     const normal = await new Poketype({
         name: 'normal',
-        weaknesses: ['fighting']
+        weaknesses: ['fighting'],
+        img: 'https://bracketfights.com/images/hero/2019/favorite-fighting-type-pokmon-all-gens-and-forms--18888/1620849824.jpg'
     })
     normal.save();
 
     const poison = await new Poketype({
         name: 'poison',
-        weaknesses: ['ground', 'psychic']
+        weaknesses: ['ground', 'psychic'],
+        img: 'https://bracketfights.com/images/hero/2019/favorite-poison-type-pokmon-all-gens-and-forms-18888/1620851242.jpg'
     })
     poison.save();
 
     const psychic = await new Poketype({
         name: 'psychic',
-        weaknesses: ['bug', 'ghost']
+        weaknesses: ['bug', 'ghost'],
+        img: 'https://www.kindpng.com/picc/m/316-3164373_pokemon-psychic-symbol-hd-png-download.png'
     })
     psychic.save();
 
     const rock = await new Poketype({
         name: 'rock',
-        weaknesses: ['water', 'grass', 'fighting', 'ground']
+        weaknesses: ['water', 'grass', 'fighting', 'ground'],
+        img: 'https://i.imgur.com/aI5nfSB.png'
     })
     rock.save();
 
     const water = await new Poketype({
         name: 'water',
-        weaknesses: ['electric', 'grass']
+        weaknesses: ['electric', 'grass'],
+        img: 'https://ih1.redbubble.net/image.402379416.5464/st,small,507x507-pad,600x600,f8f8f8.u7.jpg'
     })
     water.save();
 
