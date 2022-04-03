@@ -26,11 +26,11 @@ const Home = (props) => {
         setSearchResults(results)
     }
 
-    let navigate = useNavigate()
-           
+    
     const showPokemons = (pokemon) => {
         navigate(`${pokemon._id}`)
     }
+    let navigate = useNavigate()
 
 
     return(

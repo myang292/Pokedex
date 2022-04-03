@@ -6,6 +6,8 @@ import Update from '../components/Update'
 
 
 const Pokemon = (props) => {
+
+    // console.log(props)
     
     let {id} = useParams()
 
@@ -16,7 +18,6 @@ const Pokemon = (props) => {
             (pokemon) => pokemon._id === id
             )
             setPokemon(selectPokemon)
-            console.log(setPokemon)
         }, [])
 
     let Navigate = useNavigate()
@@ -27,34 +28,7 @@ const Pokemon = (props) => {
         window.location.reload(true)
     }
 
-    const updateOne = async (id) => {
-        await axios.updateOne(`http://localhost:3001/api/pokemons/${selectPokemon._id}`)
-        window.location.reload(true)
-    }
 
-    const editForm = () => {
-        return(
-            <div>
-                <form>
-                    <input type='text' placeholder={'Pokemon Number'} />
-                        <br />
-                    <input type='text' placeholder={'Pokemon Name'} />
-                        <br />
-                    <input type='text' placeholder={'Image URL'} />
-                        <br />
-                    <input type='text' placeholder={'Pokemon Height'} />
-                        <br />
-                    <input type='text' placeholder={'Pokemon Weight'} />
-                        <br />
-                    <input type='text' placeholder={'Pokemon Type'} />
-                        <br />
-                    <input type='text' placeholder={'Pokemon Weaknesses'} />
-                        <br />
-                </form>
-                <button>Submit</button>
-            </div>
-        )
-    }
 
     if (selectPokemon) {
         return(
@@ -73,12 +47,9 @@ const Pokemon = (props) => {
                 Weakness: {selectPokemon.weaknesses.join(',')}
                 <br />
 
-                <button onClick={editForm}>Edit</button>
-
                 <Delete deleteOne={() => deleteOne(selectPokemon._id)} />
-                {/* )} */}
-                <br />
-
+                
+                <Update id={selectPokemon._id} />
 
 
             </div>
