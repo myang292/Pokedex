@@ -43,8 +43,14 @@ app.get('/api/poketypes/:id', async (req, res) => {
     res.json(onePoketype)
 })
 
-app.put('api/poketypes/:id', async (req, res) => {
-
+app.put('/api/pokemons/:id', async (req, res) => {
+    const { num, name, img, type, height, weight, weakness } = await req.body;
+    try {
+    const updateOne = await Pokemon.findByIdAndUpdate(req.params.id, { num, name, img, type, height, weight, weakness }, {new:true})
+    res.status(200).send('update working')
+    } catch (e) {
+        return res.status(500).json({error:e.message})
+    }
 })
 
 app.delete('/api/pokemons/:id', async (req, res) => {

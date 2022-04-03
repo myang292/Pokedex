@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const Update = ({id}) => {
 
-    // console.log({id})
+    console.log({id})
     
     const [update, setUpdate] = useState(false)
     const [num, setNum] = useState('')
